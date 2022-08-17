@@ -28,7 +28,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv = __importStar(require("dotenv"));
 dotenv.config({ path: `${process.cwd()}/src/.env` });
-const App_1 = __importDefault(require("./App"));
+const app_1 = __importDefault(require("./app"));
 const auth_controller_1 = __importDefault(require("./controllers/Auth/auth.controller"));
 const exchange_controller_1 = __importDefault(require("./controllers/Exchange/exchange.controller"));
 const bodyParser = __importStar(require("body-parser"));
@@ -38,7 +38,7 @@ const corsConfig = {
     credentials: true,
     origin: true,
 };
-const app = new App_1.default({
+const app = new app_1.default({
     port: Number(process.env.PORT || 8000),
     routes: [
         new auth_controller_1.default(),

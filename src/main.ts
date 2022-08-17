@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv';
 dotenv.config({ path: `${process.cwd()}/src/.env` });
-import App from './App';
+import App from './app';
 import Auth from "./controllers/Auth/auth.controller";
 import Exchange from "./controllers/Exchange/exchange.controller";
 import * as bodyParser from "body-parser";
