@@ -90,6 +90,12 @@ export default class Auth implements IControllerBase {
                 })
             }
             const user = await UserManagerFactory.getUser(email);
+            if(!user){
+                Logger.error(`__loginAdminError(${uuidT}) - ERROR: email not exists`);
+                return res.status(HttpResponse.NOT_FOUND).json({
+                    message: 'email not exists'
+                })
+            }
             if (user.length === 0) {
                 Logger.error(`__loginAdminError(${uuidT}) - ERROR: email not exists`);
                 return res.status(HttpResponse.NOT_FOUND).json({
