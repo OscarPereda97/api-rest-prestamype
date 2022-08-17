@@ -9,7 +9,7 @@ Esta API utiliza las siguientes tecnologías y librerías:
 - Json Web Tokens
 
 El endpoint para poder hacer las pruebas correspondientes del aplicativo es:
-https://git.heroku.com/prestamype-app.git/prestamype-service/api/v1/client
+https://prestamype-app.herokuapp.com/prestamype-service/api/v1/client
 
 En este documento, también se muestra la guía para poder levantar el proyecto en Heroku, utilizándolo como un prototipo.
 
