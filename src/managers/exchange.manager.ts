@@ -13,7 +13,7 @@ export class ExchangeManager {
         if(tipoCambio === 'compra'){
             montoRecibir = montoEnviar * rate.data.purchase_price;
         }else{
-            montoRecibir = montoEnviar * rate.data.sale_price;
+            montoRecibir = montoEnviar / rate.data.sale_price;
         }
         const order = new Exchange({
             tipoCambio,
